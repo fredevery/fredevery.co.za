@@ -8,7 +8,7 @@
 role :web, %w{fuxe@fredevery.co.za}
 #role :db,  %w{deploy@example.com}
 
-set :branch, 'production'
+set :branch, 'master'
 set :build_server, 'http://fredevery.co.za:80'
 
 # Extended Server Syntax
