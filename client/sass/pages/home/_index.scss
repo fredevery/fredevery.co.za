@@ -10,24 +10,25 @@
 
     &:before,
     &:after {
-      @include valign(absolute);
       @include transition(
         transform 0.5s $transition-curve 0.5s
       );
       content: '';
-      background: rgba($c-highlight,0.8);
+      background: $c-highlight;
       height: 3em;
       width: 4em;
       z-index: 3;
+      position: absolute;
+      bottom: 4em;
     }
 
     &:before {
-      @include transform( translate3d(0,-50%,0) );
+      @include transform( translate3d(0,0,0) );
       left: 0;
     }
 
     &:after{
-      @include transform( translate3d(0,-50%,0) );
+      @include transform( translate3d(0,0,0) );
       right: 0;
     }
   }
@@ -48,13 +49,43 @@
   .background {
     @include center-screen;
     @include box-sizing( border-box );
-    background-image: url('https://images.unsplash.com/photo-1413708617479-50918bc877eb?ixlib=rb-0.3.5&q=80&fm=jpg&s=4cf4e27986f770956f88b1f90314922d');
+    background-image: url('/images/heroes/home_hero.jpg');
     background-position: center center;
     background-size: cover;
     background-color: #CCC;
     border: 2em solid #FFF;
     z-index: 1;
     position: absolute;
+  }
+
+  .quick-nav-links {
+    @include transition( opacity 0.5s ease );
+    @include transform( translate3d(-50%,0,0) );
+    opacity: 1;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    bottom: 4em;
+    z-index: 3;
+    left: 50%;
+
+    a {
+      float: left;
+      width: 30%;
+      margin: 0 1.5%;
+      border: 1px solid #FFF;
+      color: #FFF;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 1em 0;
+      line-height: 1em;
+      text-decoration: none;
+
+      &:hover {
+        background: #FFF;
+        color: $c-highlight;
+      }
+    }
   }
 
   .logo {
@@ -136,6 +167,10 @@
       &:after {
         @include transform( translate3d(100%,-50%,0) );
       }
+    }
+
+    .quick-nav-links {
+      opacity: 0;
     }
 
     .logo .logo-stripe {

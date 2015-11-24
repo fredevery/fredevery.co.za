@@ -24,7 +24,7 @@
     .skillset-descriptions {
       @include transition( transform 0.5s $transition-curve 0.2s );
       @include transform( translate3d(0,-50%,0) );
-      background: rgba($c-medium-grey, 0.92);
+      background: $c-medium-grey;
       width: 105%;
       left: 0;
       position: absolute;
@@ -33,7 +33,7 @@
       &:before {
         @include valign(absolute);
         content: '';
-        border-left: 1.4em solid rgba($c-medium-grey, 0.92);
+        border-left: 1.4em solid $c-medium-grey;
         border-top: 1.4em solid transparent;
         border-bottom: 1.4em solid transparent;
         width: 0;

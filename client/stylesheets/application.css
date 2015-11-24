@@ -559,6 +559,99 @@ form input {
   height: 0%;
 }
 /* line 185, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details {
+  -moz-transform: translate3d(0, -30%, 0);
+  -ms-transform: translate3d(0, -30%, 0);
+  -webkit-transform: translate3d(0, -30%, 0);
+  transform: translate3d(0, -30%, 0);
+  width: 40%;
+  left: 10%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+}
+/* line 193, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details .say-my-name {
+  -moz-transition: -moz-transform 0.75s ease;
+  -o-transition: -o-transform 0.75s ease;
+  -webkit-transition: -webkit-transform 0.75s ease;
+  transition: transform 0.75s ease;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  text-align: right;
+  padding: 0 1em 1em 0;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #BBB;
+}
+/* line 201, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details .say-my-name h1 {
+  font-size: 3.1em;
+}
+/* line 205, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details .say-my-name h2 {
+  color: #DC095D;
+}
+/* line 210, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details .contact-links {
+  -moz-transition: -moz-transform 0.75s ease;
+  -o-transition: -o-transform 0.75s ease;
+  -webkit-transition: -webkit-transform 0.75s ease;
+  transition: transform 0.75s ease;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 215, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details p {
+  text-align: right;
+  padding-right: 1em;
+}
+/* line 49, ../sass/shared/_mixins.scss */
+#PrimaryNav .menu-content .contact-details p:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 220, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details p a {
+  text-decoration: none;
+  color: #DC095D;
+}
+/* line 224, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details p a:hover {
+  text-decoration: underline;
+}
+/* line 230, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details .dl-button {
+  float: right;
+  padding: 1em;
+  border: 1px solid #DC095D;
+  line-height: 1em;
+}
+/* line 236, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details .dl-button:hover {
+  background: #DC095D;
+  color: #FFF;
+  text-decoration: none;
+}
+/* line 244, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details.transition-out .say-my-name {
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+/* line 248, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .contact-details.transition-out .contact-links {
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+/* line 254, ../sass/menus/_primary_nav.scss */
 #PrimaryNav .menu-content .site-nav {
   -moz-transform: translate3d(0, -50%, 0);
   -ms-transform: translate3d(0, -50%, 0);
@@ -573,14 +666,14 @@ form input {
   width: 50%;
   overflow: hidden;
 }
-/* line 194, ../sass/menus/_primary_nav.scss */
+/* line 263, ../sass/menus/_primary_nav.scss */
 #PrimaryNav .menu-content .site-nav .nav-item {
   -moz-transition: -moz-transform 0.3s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.3s cubic-bezier(0.86, 0, 0.07, 1);
   -o-transition: -o-transform 0.3s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.3s cubic-bezier(0.86, 0, 0.07, 1);
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.3s cubic-bezier(0.86, 0, 0.07, 1);
   transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.3s cubic-bezier(0.86, 0, 0.07, 1);
 }
-/* line 200, ../sass/menus/_primary_nav.scss */
+/* line 269, ../sass/menus/_primary_nav.scss */
 #PrimaryNav .menu-content .site-nav .nav-item.transition-out {
   -moz-transform: translate3d(-100%, 0, 0);
   -ms-transform: translate3d(-100%, 0, 0);
@@ -588,7 +681,7 @@ form input {
   transform: translate3d(-100%, 0, 0);
   opacity: 0;
 }
-/* line 205, ../sass/menus/_primary_nav.scss */
+/* line 274, ../sass/menus/_primary_nav.scss */
 #PrimaryNav .menu-content .site-nav .nav-item a {
   -moz-transition: border-left 0.3s cubic-bezier(0.86, 0, 0.07, 1);
   -o-transition: border-left 0.3s cubic-bezier(0.86, 0, 0.07, 1);
@@ -602,9 +695,13 @@ form input {
   text-decoration: none;
   text-align: left;
 }
-/* line 215, ../sass/menus/_primary_nav.scss */
+/* line 284, ../sass/menus/_primary_nav.scss */
 #PrimaryNav .menu-content .site-nav .nav-item a:hover {
   border-left: 1em solid #333;
+}
+/* line 289, ../sass/menus/_primary_nav.scss */
+#PrimaryNav .menu-content .site-nav .nav-item.active a {
+  border-left: 1em solid #DC095D;
 }
 
 /* line 3, ../sass/posts/_post.scss */
@@ -1120,40 +1217,36 @@ form input {
 }
 /* line 11, ../sass/pages/home/_index.scss */
 #HomeIndex .content-container:before, #HomeIndex .content-container:after {
-  -moz-transform: translate3d(0, -50%, 0);
-  -ms-transform: translate3d(0, -50%, 0);
-  -webkit-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
-  position: absolute;
-  top: 50%;
   -moz-transition: -moz-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.5s;
   -o-transition: -o-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.5s;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
   -webkit-transition-delay: 0.5s;
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.5s;
   content: '';
-  background: rgba(220, 9, 93, 0.8);
+  background: #DC095D;
   height: 3em;
   width: 4em;
   z-index: 3;
+  position: absolute;
+  bottom: 4em;
 }
-/* line 24, ../sass/pages/home/_index.scss */
+/* line 25, ../sass/pages/home/_index.scss */
 #HomeIndex .content-container:before {
-  -moz-transform: translate3d(0, -50%, 0);
-  -ms-transform: translate3d(0, -50%, 0);
-  -webkit-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   left: 0;
 }
-/* line 29, ../sass/pages/home/_index.scss */
+/* line 30, ../sass/pages/home/_index.scss */
 #HomeIndex .content-container:after {
-  -moz-transform: translate3d(0, -50%, 0);
-  -ms-transform: translate3d(0, -50%, 0);
-  -webkit-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   right: 0;
 }
-/* line 35, ../sass/pages/home/_index.scss */
+/* line 36, ../sass/pages/home/_index.scss */
 #HomeIndex .background-wrap {
   -moz-transform: translate3d(-50%, -50%, 0);
   -ms-transform: translate3d(-50%, -50%, 0);
@@ -1173,7 +1266,7 @@ form input {
   position: absolute;
   z-index: 1;
 }
-/* line 48, ../sass/pages/home/_index.scss */
+/* line 49, ../sass/pages/home/_index.scss */
 #HomeIndex .background {
   -moz-transform: translate3d(-50%, -50%, 0);
   -ms-transform: translate3d(-50%, -50%, 0);
@@ -1186,7 +1279,7 @@ form input {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background-image: url("https://images.unsplash.com/photo-1413708617479-50918bc877eb?ixlib=rb-0.3.5&q=80&fm=jpg&s=4cf4e27986f770956f88b1f90314922d");
+  background-image: url("/images/heroes/home_hero.jpg");
   background-position: center center;
   background-size: cover;
   background-color: #CCC;
@@ -1194,7 +1287,43 @@ form input {
   z-index: 1;
   position: absolute;
 }
-/* line 60, ../sass/pages/home/_index.scss */
+/* line 61, ../sass/pages/home/_index.scss */
+#HomeIndex .quick-nav-links {
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  -moz-transform: translate3d(-50%, 0, 0);
+  -ms-transform: translate3d(-50%, 0, 0);
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+  opacity: 1;
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  bottom: 4em;
+  z-index: 3;
+  left: 50%;
+}
+/* line 72, ../sass/pages/home/_index.scss */
+#HomeIndex .quick-nav-links a {
+  float: left;
+  width: 30%;
+  margin: 0 1.5%;
+  border: 1px solid #FFF;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1em 0;
+  line-height: 1em;
+  text-decoration: none;
+}
+/* line 84, ../sass/pages/home/_index.scss */
+#HomeIndex .quick-nav-links a:hover {
+  background: #FFF;
+  color: #DC095D;
+}
+/* line 91, ../sass/pages/home/_index.scss */
 #HomeIndex .logo {
   -moz-transform: translate3d(-50%, -50%, 0);
   -ms-transform: translate3d(-50%, -50%, 0);
@@ -1209,7 +1338,7 @@ form input {
   position: relative;
   z-index: 2;
 }
-/* line 67, ../sass/pages/home/_index.scss */
+/* line 98, ../sass/pages/home/_index.scss */
 #HomeIndex .logo:before {
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
@@ -1222,7 +1351,7 @@ form input {
   left: -30%;
   background: #FEFEFE;
 }
-/* line 78, ../sass/pages/home/_index.scss */
+/* line 109, ../sass/pages/home/_index.scss */
 #HomeIndex .logo .logo-stripe {
   -moz-transition: width 0.5s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.5s cubic-bezier(0.86, 0, 0.07, 1);
   -o-transition: width 0.5s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.5s cubic-bezier(0.86, 0, 0.07, 1);
@@ -1233,33 +1362,33 @@ form input {
   height: 28%;
   background: #333;
 }
-/* line 88, ../sass/pages/home/_index.scss */
+/* line 119, ../sass/pages/home/_index.scss */
 #HomeIndex .logo .logo-stripe.top {
   width: 100%;
   top: 0;
   left: 0;
 }
-/* line 94, ../sass/pages/home/_index.scss */
+/* line 125, ../sass/pages/home/_index.scss */
 #HomeIndex .logo .logo-stripe.middle {
   width: 66%;
   top: 36%;
   left: 0;
 }
-/* line 100, ../sass/pages/home/_index.scss */
+/* line 131, ../sass/pages/home/_index.scss */
 #HomeIndex .logo .logo-stripe.bottom {
   left: 0;
 }
-/* line 104, ../sass/pages/home/_index.scss */
+/* line 135, ../sass/pages/home/_index.scss */
 #HomeIndex .logo .logo-stripe.bottom, #HomeIndex .logo .logo-stripe.tail {
   width: 46%;
   bottom: 0;
 }
-/* line 109, ../sass/pages/home/_index.scss */
+/* line 140, ../sass/pages/home/_index.scss */
 #HomeIndex .logo .logo-stripe.tail {
   right: 0%;
   background: #DC095D;
 }
-/* line 116, ../sass/pages/home/_index.scss */
+/* line 147, ../sass/pages/home/_index.scss */
 #HomeIndex h1 {
   position: absolute;
   bottom: 10%;
@@ -1267,33 +1396,37 @@ form input {
   width: 100%;
   z-index: 5;
 }
-/* line 127, ../sass/pages/home/_index.scss */
+/* line 158, ../sass/pages/home/_index.scss */
 .nav-open #HomeIndex .content-container:before, .nav-open #HomeIndex .content-container:after {
   -moz-transition-delay: 0s;
   -o-transition-delay: 0s;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
-/* line 132, ../sass/pages/home/_index.scss */
+/* line 163, ../sass/pages/home/_index.scss */
 .nav-open #HomeIndex .content-container:before {
   -moz-transform: translate3d(-100%, -50%, 0);
   -ms-transform: translate3d(-100%, -50%, 0);
   -webkit-transform: translate3d(-100%, -50%, 0);
   transform: translate3d(-100%, -50%, 0);
 }
-/* line 136, ../sass/pages/home/_index.scss */
+/* line 167, ../sass/pages/home/_index.scss */
 .nav-open #HomeIndex .content-container:after {
   -moz-transform: translate3d(100%, -50%, 0);
   -ms-transform: translate3d(100%, -50%, 0);
   -webkit-transform: translate3d(100%, -50%, 0);
   transform: translate3d(100%, -50%, 0);
 }
-/* line 141, ../sass/pages/home/_index.scss */
+/* line 172, ../sass/pages/home/_index.scss */
+.nav-open #HomeIndex .quick-nav-links {
+  opacity: 0;
+}
+/* line 176, ../sass/pages/home/_index.scss */
 .nav-open #HomeIndex .logo .logo-stripe {
   width: 0;
   opacity: 0;
 }
-/* line 146, ../sass/pages/home/_index.scss */
+/* line 181, ../sass/pages/home/_index.scss */
 .nav-open #HomeIndex .background-wrap {
   height: 0;
   width: 0;
@@ -1625,7 +1758,7 @@ form input {
   -ms-transform: translate3d(0, -50%, 0);
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);
-  background: rgba(38, 50, 72, 0.92);
+  background: #263248;
   width: 105%;
   left: 0;
   position: absolute;
@@ -1640,7 +1773,7 @@ form input {
   position: absolute;
   top: 50%;
   content: '';
-  border-left: 1.4em solid rgba(38, 50, 72, 0.92);
+  border-left: 1.4em solid #263248;
   border-top: 1.4em solid transparent;
   border-bottom: 1.4em solid transparent;
   width: 0;

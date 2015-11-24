@@ -23,21 +23,38 @@
 
     {{#if showMenuContent}}
       <div class="menu-content">
+        <div class="contact-details">
+          <div class="say-my-name">
+            <h1>Fred Every</h1>
+            <h2>Frontend Developer</h2>
+          </div>
+          <div class="contact-links">
+            <p>
+              <a class="dl-button" href="/documents/Fred_Every-Resume.pdf" target="_blank">
+                Download my Resume
+              </a>
+            </p>
+            <p>
+              Drop me a mail: <br>
+              <a href="mailto:fred@fredevery.co.za">fred@fredevery.co.za</a>
+            </p>
+          </div>
+        </div>
         <nav class="site-nav">
           <ul>
-            <li class="nav-item">
+            <li class="nav-item {{isActivePath '/'}}">
               <a href="/">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{isActivePath '/about'}}">
               <a href="/about">About Me</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{isActivePath '/skillset'}}">
               <a href="/skillset">Skillset</a>
             </li>
             <!-- <li class="nav-item">
               <a href="/skillset">Toolset</a>
             </li> -->
-            <li class="nav-item">
+            <li class="nav-item {{isActivePath '/portfolio'}}">
               <a href="/portfolio">Portfolio</a>
             </li>
             <!-- <li class="nav-item">

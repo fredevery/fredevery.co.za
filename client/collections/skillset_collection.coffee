@@ -374,20 +374,20 @@ SKILLSET = [
     proficiency: 70
     logo: 'imagemagick.png'
   },
-  {
-    type: 'library_api'
-    name: 'Phantom.js'
-    start_date: "2010-06-01"
-    proficiency: 50
-    logo: 'phantomjs.png'
-  },
-  {
-    type: 'library_api'
-    name: 'Isotope'
-    start_date: "2015-11-19"
-    proficiency: 70
-    logo: 'isotope.png'
-  },
+  # {
+  #   type: 'library_api'
+  #   name: 'Phantom.js'
+  #   start_date: "2010-06-01"
+  #   proficiency: 50
+  #   logo: 'phantomjs.png'
+  # },
+  # {
+  #   type: 'library_api'
+  #   name: 'Isotope'
+  #   start_date: "2015-11-19"
+  #   proficiency: 70
+  #   logo: 'isotope.png'
+  # },
 
   # Storage
   {
@@ -686,8 +686,7 @@ SKILLSET_DESCRIPTIONS = [
     category: 'languages'
     title: 'Languages'
     description: "
-      Frontend/clientside languages FTW! <br />
-      <i>(Totally capable of hacking together a working backend system though)</i>
+      Converse confidently in Mandarin? No, but I am fluent in 9 other languages.
     "
   },
   {
@@ -695,8 +694,7 @@ SKILLSET_DESCRIPTIONS = [
     title: 'Paradigms'
     description: "
       Being self-taught is no reason not to fill one's head full of things you
-      couldn't talk to your spouse about. <br />
-      <i>(Assuming your spouse's head isn't filled with the same stuff)</i>
+      can confuse your dinner guests with.
     "
   },
   {
@@ -704,26 +702,24 @@ SKILLSET_DESCRIPTIONS = [
     title: 'Frameworks'
     description: "
       Each framework has its stengths, weaknesses, and opinions. By exposing
-      myself to as many as I can, I grow as a programmer. <br />
-      <i>(Sanity levels may vary)</i>
+      as many as I can, my coding ability grows. My sanity, however, waxes and
+      wanes.
     "
   },
   {
     category: 'libraries_apis'
     title: 'Libraries / APIs'
     description: "
-      This list is by no means exhaustive, and I am sure there are many Libraries
-      and APIs that I've used but forgotten about. <br />
-      <i>(Watch this space ;))</i>
+      This list is by no means exhaustive, this is rather the quintessential
+      'Top 12'.
     "
   },
   {
     category: 'storage'
     title: 'Storage'
     description: "
-      Currently the weakest of my skills. That's not to say I can't CRUD the
-      bejeezes out of a DB. I am just not well versed in the most perfomant ways
-      of CRUDing the bejeezes out of a DB.
+      As is the case with my understanding of fashion trends, this area of my
+      expertise is the one in which development is 'in progress'.
     "
   },
   {
@@ -747,8 +743,8 @@ SKILLSET_DESCRIPTIONS = [
     category: 'providers'
     title: 'Providers'
     description: "
-      I can totally type my email address and password in correctly and log into
-      some pretty 'interesting' dashboards.
+      Experimentation and interaction with these providers has brought home the
+      difference between doing something 'the easy way' and doing it 'the hard way'.
     "
   }
 ]
