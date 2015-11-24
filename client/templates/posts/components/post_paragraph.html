@@ -1,0 +1,10 @@
+<template name="PostParagraph">
+  <div class="{{classes}}" data-id="{{_id}}">
+    {{#if unverified}}
+      <a class="statement-info"><i class="icon-info-with-circle"></i></a>
+    {{/if}}
+    <div {{editable key="paragraph" content=content}}>
+      {{{content}}}
+    </div>
+  </div>
+</template>

@@ -1,0 +1,254 @@
+#PortfolioIndex {
+  height: 100%;
+  width: 100%;
+
+  .ftscroller_container,
+  .ftscroller_x,
+  .portfolio-scroller,
+  .portfolio-scroller-content {
+    height: 100%;
+  }
+
+  .scroller-arrows {
+    .scroll-to {
+      @include transition( transform 0.5s $transition-curve );
+      @include transform( translate3d(0,-50%,0) );
+      font-size: 1.2em;
+      color: #FFF;
+      background: $c-highlight;
+      position: fixed;
+      top: 50%;
+      line-height: 2.5em;
+      height: 2.5em;
+      width: 2.5em;
+      text-align: center;
+      z-index: 80;
+
+      &:hover {
+        width: 3em;
+      }
+
+      i {
+        line-height: inherit;
+      }
+
+      &.prev {
+        left: 0;
+
+        &.hidden {
+          @include transform( translate3d(-100%,-50%,0) );
+        }
+      }
+
+      &.next {
+        right: 0;
+
+        &.hidden {
+          @include transform( translate3d(100%,-50%,0) );
+        }
+      }
+    }
+  }
+
+  .portfolio-scroller {
+    width: 100%;
+  }
+
+  .portfolio-piece {
+    @include transition(
+      transform 0.5s $transition-curve,
+      opacity 0.5s ease
+    );
+    @include clearfix;
+    @include box-sizing( border-box );
+    @include transform( scale3d(1,1,1) );
+    opacity: 1;
+    padding: 3em 2em;
+    height: 100%;
+    width: 100%;
+    float: left;
+
+    .portfolio-piece-wrapper {
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    .portfolio-piece-hero,
+    .portfolio-piece-content {
+      float: left;
+      height: 100%;
+    }
+
+    .portfolio-piece-hero {
+      width: 33%;
+      background: $c-medium-grey;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      @include valign;
+      overflow: hidden;
+      margin: 0 3em;
+      color: #FFF;
+
+      h1 {
+        margin-bottom: 0.1em;
+      }
+
+      h3 {
+        margin-bottom: 1em;
+        color: lighten($c-medium-grey, 25%);
+      }
+    }
+
+    .visit-project {
+      position: absolute;
+      bottom: 3em;
+      right: 3em;
+      margin: 0;
+
+      a {
+        float: right;
+        padding: 0.5em 1em;
+        border: 1px solid #FFF;
+        text-decoration: none;
+        color: #FFF;
+
+        &:hover {
+          background: #FFF;
+          color: $c-highlight;
+        }
+      }
+    }
+
+    .portfolio-piece-content {
+      background-color: lighten($c-light-grey, 37%);
+      background-position: top right;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 67%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .screens-container {
+      @include transform( translate3d(0, -50%, 0) );
+      position: absolute;
+      top: 50%;
+      width: 80%;
+      left: 10%;
+    }
+
+    .desktop-screen {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+
+      .piece-screenshot {
+        position: absolute;
+        width: 91.116%;
+        top: 5.683%;
+        left: 4.416%;
+        z-index: 2;
+      }
+
+      .screen-bg {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+      }
+
+      + .iphone {
+        position: absolute;
+        width: 16%;
+        left: 4%;
+        bottom: 0;
+        z-index: 5;
+      }
+    }
+
+    .desktop-3 {
+      width: 90%;
+      left: 5%;
+
+      .desktop-screen {
+        float: left;
+        width: 32.33%;
+        margin: 0 0.5%;
+      }
+    }
+
+    .iphone {
+      width: 30%;
+      margin: 0 auto;
+      position: relative;
+
+      .handheld-screenshot {
+        width: 86%;
+        position: absolute;
+        top: 14%;
+        left: 6.75%;
+        z-index: 2;
+        border: 1px solid #2A2A2A;
+      }
+
+      .iphone-bg {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+
+    .handheld-3 {
+      width: 70%;
+      left: 15%;
+
+      .iphone {
+        float: left;
+        width: 30%;
+        margin: 0 1.6%;
+      }
+    }
+
+    .skillsets-used {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+
+      .category {
+        float: right;
+        clear: both;
+      }
+
+      img {
+        height: 30px;
+        width: 30px;
+        float: left;
+        margin: 5px 0 0 5px;
+      }
+    }
+  }
+
+  .nav-open & {
+    .scroller-arrows {
+      .scroll-to {
+        &.prev {
+          @include transform( translate3d(-100%,-50%,0) );
+        }
+
+        &.next {
+          @include transform( translate3d(100%,-50%,0) );
+        }
+      }
+    }
+
+    .portfolio-piece {
+      @include transform( scale3d(0.5,0.5,1) );
+      opacity: 0;
+    }
+  }
+}

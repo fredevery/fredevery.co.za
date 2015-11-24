@@ -1,0 +1,68 @@
+@mixin valign($position: relative) {
+  @include transform( translate3d(0,-50%,0) );
+  position: $position;
+  top: 50%;
+}
+
+@mixin center-screen($position: absolute) {
+  @include transform( translate3d(-50%, -50%, 0) );
+  position: $position;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+}
+
+@mixin long-shadow($depth: 30px, $opacity: 0.5) {
+  position: relative;
+  z-index: 1;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    opacity: $opacity;
+    pointer-events: none;
+  }
+
+  &:before { // Bottom Shadow
+    @include transform-origin( 0,0 );
+    @include transform( skewX(45deg) );
+    @include background(linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.2) 33%, rgba(0,0,0,0.05) 66%, rgba(0,0,0,0)));
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: $depth;
+  }
+
+  &:after { // Right Shadow
+    @include transform-origin( 0,0 );
+    @include transform( skewY(45deg) );
+    @include background(linear-gradient(to right, rgba(0,0,0,.5), rgba(0,0,0,.2) 33%, rgba(0,0,0,0.05) 66%, rgba(0,0,0,0)));
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: $depth;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin stagger-transitions($child-count, $delay, $include-children: false, $child-selector: "*", $child-base-delay: 0.1) {
+  @for $i from 1 through ($child-count + 1) {
+    &:nth-child(#{$i}) {
+      @include transition-delay(#{$delay * $i}s);
+
+      @if $include-children {
+        #{$child-selector} {
+          @include transition-delay(#{$child-base-delay + ($delay * $i)}s);
+        }
+      }
+    }
+  }
+}

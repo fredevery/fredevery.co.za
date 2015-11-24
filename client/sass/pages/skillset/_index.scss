@@ -1,0 +1,362 @@
+#SkillsetIndex {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .skillset-copy {
+    @include transition(
+      transform 0.5s $transition-curve,
+      opacity 0.5s $transition-curve
+    );
+    @include transform( translate3d(0,0,0) );
+    opacity: 1;
+    background: url('/images/heroes/skillset_hero.jpg') center;
+    float: left;
+    width: 33%;
+    height: 100%;
+
+    .section {
+      width: 80%;
+      margin: 0 auto;
+      height: 100%;
+    }
+
+    .skillset-descriptions {
+      @include transition( transform 0.5s $transition-curve 0.2s );
+      @include transform( translate3d(0,-50%,0) );
+      background: rgba($c-medium-grey, 0.92);
+      width: 105%;
+      left: 0;
+      position: absolute;
+      top: 50%;
+
+      &:before {
+        @include valign(absolute);
+        content: '';
+        border-left: 1.4em solid rgba($c-medium-grey, 0.92);
+        border-top: 1.4em solid transparent;
+        border-bottom: 1.4em solid transparent;
+        width: 0;
+        height: 0;
+        left: 100%;
+      }
+    }
+
+    .section-desc {
+      @include valign;
+      width: 100%;
+      padding: 10% 0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      color: #FFF;
+
+      h1 {
+        @include transition(
+          transform 0.7s $transition-curve,
+          opacity 0.5s $transition-curve
+        );
+        @include transform( translate3d(-100%,0,0) );
+        opacity: 0;
+        width: 100%;
+        position: relative;
+        left: 10%;
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        @include transition(
+          transform 0.7s $transition-curve 0.1s,
+          opacity 0.5s $transition-curve 0.1s
+        );
+        @include transform( translate3d(-100%,0%,0) );
+        padding: 0 10%;
+        opacity: 0;
+      }
+
+      &.visible {
+
+        h1, p {
+          @include transform( translate3d(0,0,0) );
+          opacity: 1;
+        }
+      }
+    }
+
+    .skillset-titles {
+      @include valign;
+      text-align: center;
+      padding: 2em;
+      border-top: 1px solid $c-highlight;
+      border-bottom: 1px solid $c-highlight;
+    }
+  }
+
+  .skillset-blocks {
+    @include transition(
+      transform 0.5s $transition-curve,
+      opacity 0.5s $transition-curve
+    );
+    @include transform( translate3d(0, 0, 0) );
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .content-wrap {
+      width: 66%;
+      float: right;
+    }
+
+    .section,
+    .last-section {
+      @include clearfix;
+      margin: 0 auto;
+      width: 80%;
+      max-width: 700px;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        display: block;
+        border-left: 2em solid $c-highlight;
+        border-right: 2em solid $c-highlight;
+        position: absolute;
+        top: 0;
+        left: -2em;
+      }
+    }
+
+    .section {
+      padding: 3em 0 2em;
+
+      &.visible {
+        .skill-block {
+          @include transform( scale(1,1) );
+          opacity: 1;
+        }
+
+        .progress-bar {
+          @include transform( translate3d(0,0,0) );
+        }
+      }
+    }
+
+  }
+
+  .section-title {
+    margin: 0 0 1em 0;
+    position: relative;
+    clear: both;
+    display: none;
+
+    &:before {
+      content: '';
+      height: 3px;
+      width: 1.2em;
+      position: absolute;
+      right: 100%;
+      bottom: 0;
+      margin-right: 0.5em;
+      background: $c-highlight;
+    }
+  }
+
+  .nav-open & {
+    .page-hero {
+      @include transform( translate3d(100%, 0, 0) );
+      opacity: 0;
+    }
+
+    .hero-titles {
+      @include transform( translate3d(-100%, -50%, 0) );
+    }
+
+    .page-content {
+      @include transform( translate3d(-100%, 0, 0) );
+      opacity: 0;
+    }
+  }
+
+  .skill-block {
+    @include transition(
+      transform 0.3s ease,
+      opacity 0.3s ease
+    );
+    @include transform( scale(0.5,0.5) );
+    @include stagger-transitions(20, 0.1, true, ".progress-bar", 0.75);
+    // @include stagger-transitions(20, 0.1);
+    @include clearfix;
+    opacity: 0;
+    width: 23%;
+    position: relative;
+    float: left;
+    margin: 0 1% 1em;
+    padding-bottom: 60px;
+
+    .skill-hero {
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      background: $c-medium-grey;
+      margin-right: 5%;
+      position: relative;
+
+      img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .skill-meta {
+      width: 100%;
+      // border-top: 1px solid $c-medium-grey;
+      // border-bottom: 1px solid $c-medium-grey;
+      // position: absolute;
+      // top: 0;
+      // bottom: 0;
+      // right: 0;
+      background: $c-medium-grey;
+      color: #FFF;
+      border-top: 2px solid #FFF;
+      position: absolute;
+      bottom: 0;
+      height: 60px;
+
+      &:before {
+        @include transform( translate3d(-50%,0,0) );
+        content: '';
+        height: 0;
+        width: 0;
+        border-bottom: 8px solid $c-medium-grey;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        z-index: 2;
+        margin-bottom: -1px;
+      }
+
+      &:after {
+        @include transform( translate3d(-50%,0,0) );
+        content: '';
+        height: 0;
+        width: 0;
+        border-bottom: 9px solid #FFF;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        z-index: 1;
+      }
+
+      p {
+        margin-bottom: 0.5em;
+        line-height: 1;
+        font-size: 0.8em;
+
+        &.skill-name {
+          font-size: 1em;
+          line-height: 1.2;
+          height: 1.2em;
+          text-overflow: ellipsis;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        &.experience {
+          display: none;
+        }
+
+        &.proficiency {
+          margin-bottom: 0;
+        }
+
+        b {
+          color: $c-medium-grey;
+          font-weight: normal;
+        }
+      }
+    }
+
+    .skill-meta-content {
+      @include valign(absolute);
+      padding: 0 7%;
+      width: 86%;
+    }
+
+    .proficiency {
+      display: block;
+      height: 0.5em;
+      width: 100%;
+      background: lighten($c-light-grey, 30%);
+      margin: 0.5em 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      @include transition( transform 1s ease );
+      @include transform( translate3d(-100%,0,0) );
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: lighten($c-highlight, 10%);
+      width: 50%;
+      height: 105%;
+    }
+  }
+
+  .nav-open & {
+    .skillset-copy {
+      @include transform( translate3d(0,100%,0) );
+      opacity: 0;
+    }
+
+    .skillset-descriptions {
+      @include transform( translate3d(-110%,-50%,0) );
+    }
+
+    .skillset-blocks {
+      @include transform( translate3d(0,-100%,0) );
+      opacity: 0;
+    }
+  }
+}
+
+@media( max-width: 1024px ) {
+  #SkillsetIndex {
+    .skill-block {
+      width: 30%;
+      // margin: 0 1.5% 1em;
+      //
+      // .skill-hero,
+      // .skill-meta {
+      //   display: block;
+      //   float: none;
+      //   width: 100%;
+      //   position: relative;
+      // }
+      //
+      // .skill-hero {
+      //   padding-bottom: 100%;
+      // }
+      //
+      // .skill-meta-content {
+      //   @include transform( translate3d(0,0,0) );
+      //   position: relative;
+      // }
+    }
+  }
+}

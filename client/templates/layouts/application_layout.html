@@ -1,0 +1,17 @@
+<template name="ApplicationLayout">
+  <!-- <a class="logo" href="/">
+    <img src="/images/logo.png" />
+  </a>
+  {{#if currentUser}}
+    {{> AdminMenu}}
+  {{/if}} -->
+  {{> PrimaryNav}}
+
+  <div class="{{contentClasses}}">
+    {{> yield}}
+  </div>
+  
+  {{#if showLoginForm}}
+    {{> LoginForm}}
+  {{/if}}
+</template>

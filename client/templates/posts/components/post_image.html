@@ -1,0 +1,7 @@
+<template name="PostImage">
+  {{#if src}}
+    <img class="{{classes}}" src="/upload/{{src}}" />
+  {{else}}
+    {{> dropzone callbacks=uploadComplete}}
+  {{/if}}
+</template>

@@ -1,0 +1,98 @@
+<template name="PortfolioIndex">
+  <main id="PortfolioIndex">
+    <div class="scroller-arrows">
+      <a class="scroll-to prev hidden" data-direction="left">
+        <i class="icon-chevron-thin-left"></i>
+      </a>
+      <a class="scroll-to next" data-direction="right">
+        <i class="icon-chevron-thin-right"></i>
+      </a>
+    </div>
+    <div class="portfolio-scroller">
+      <div class="portfolio-scroller-content">
+        {{#each portfolioPieces}}
+          <section class="portfolio-piece" style="width: {{pieceWidth}}px">
+            <div class="portfolio-piece-wrapper">
+              <div class="portfolio-piece-hero">
+                <div class="hero-content">
+                  <h1>{{title}}</h1>
+                  <h3>{{company}}</h3>
+                  <p>
+                    {{description}}
+                  </p>
+                </div>
+                {{#if link}}
+                  <p class="visit-project">
+                    <a href="{{link}}" target="_blank"> Visit Project</a>
+                  </p>
+                {{/if}}
+              </div>
+              <div class="portfolio-piece-content">
+                <div class="screens-container {{desktopWidth}} {{handheldWidth}}">
+                  {{#each images.desktop}}
+                    <div class="desktop-screen">
+                      <img class="piece-screenshot" src="/images/portfolio_screens/{{this}}">
+                      <img class="screen-bg" src="/images/portfolio_screens/desktop_screen.png">
+                    </div>
+                  {{/each}}
+
+                  {{#each images.handheld}}
+                    <div class="iphone">
+                      <img class="handheld-screenshot" src="/images/portfolio_screens/{{this}}">
+                      <img class="iphone-bg" src="/images/portfolio_screens/iphone.png">
+                    </div>
+                  {{/each}}
+                </div>
+
+                <div class="skillsets-used">
+                  {{#if servers}}
+                    <div class="servers-used category">
+                      {{#each servers}}
+                        <img src="/images/skill-logos/{{this}}.png">
+                      {{/each}}
+                    </div>
+                  {{/if}}
+
+                  {{#if frameworks}}
+                    <div class="frameworks-used category">
+                      {{#each frameworks}}
+                        <img src="/images/skill-logos/{{this}}.png">
+                      {{/each}}
+                    </div>
+                  {{/if}}
+
+                  {{#if libraries_apis}}
+                    <div class="libraries-apis-used category">
+                      {{#each libraries_apis}}
+                        <img src="/images/skill-logos/{{this}}.png">
+                      {{/each}}
+                    </div>
+                  {{/if}}
+
+                  {{#if languages}}
+                    <div class="languages-used category">
+                      {{#each languages}}
+                        <img src="/images/skill-logos/{{this}}.png">
+                      {{/each}}
+                    </div>
+                  {{/if}}
+
+                  <!-- {{#if paradigms}}
+                    <div class="paradigms-used category">
+                      {{#each paradigms}}
+                        <img src="/images/skill-logos/{{this}}.png">
+                      {{/each}}
+                    </div>
+                  {{/if}} -->
+                </div>
+              </div>
+            </div>
+          </section>
+        {{/each}}
+      </div>
+    </div>
+    <nav class="scroll-dots horizontal">
+
+    </nav>
+  </main>
+</template>

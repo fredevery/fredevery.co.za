@@ -1,0 +1,136 @@
+#AboutIndex {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  // overflow: hidden;
+
+  .profile-picture {
+    @include transition(
+      transform 0.5s $transition-curve,
+      opacity 0.5s $transition-curve
+    );
+    @include transform( translate3d(0, 0, 0) );
+    opacity: 1;
+    background-image: url('/images/heroes/about_me_hero.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: #CCC;
+    width: 33%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+
+  .page-titles {
+    @include transition( transform 0.5s $transition-curve );
+    @include transform( translate3d(0, -50%, 0) );
+    top: 50%;
+    position: absolute;
+    background: rgba(#FF0066, 0.5);
+    // border-top: 1px solid #FFF;
+    // border-bottom: 1px solid #FFF;
+    padding: 2em 0;
+    text-align: center;
+    overflow: hidden;
+    color: #FFF;
+    width: 100%;
+
+    h1 {
+      font-weight: 300;
+      line-height: 1;
+    }
+  }
+
+  .page-content {
+    @include transition(
+      transform 0.5s $transition-curve,
+      opacity 0.5s $transition-curve
+    );
+    @include transform( translate3d(0, 0, 0) );
+    opacity: 1;
+    position: relative;
+    height: 100%;
+  }
+
+  .content-wrap {
+    margin: 8em 0 8em 33%;
+  }
+
+  .section-content {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .section-title {
+    // @include transform( translate3d(-0.5em, 0, 0) );
+    margin-bottom: 0.5em;
+    position: relative;
+
+    &:before {
+      content: '';
+      height: 3px;
+      width: 1.2em;
+      position: absolute;
+      right: 100%;
+      bottom: 0;
+      margin-right: 0.5em;
+      background: #FF0066;
+    }
+  }
+
+  .nav-open & {
+    .profile-picture {
+      @include transform( translate3d(-100%, 0, 0) );
+      opacity: 0;
+    }
+
+    .page-titles {
+      @include transform( translate3d(100%, -50%, 0) );
+    }
+
+    .page-content {
+      @include transform( translate3d(100%, 0, 0) );
+      opacity: 0;
+    }
+  }
+
+  .quick-stats {
+    float: right;
+    margin: 0 8em 2em 2em;
+
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 0.5em;
+      color: #999;
+      text-align: center;
+    }
+
+    li {
+      padding: 0.75em 1em;
+      border-top: 1px solid #999;
+    }
+
+    b {
+      text-transform: uppercase;
+      font-size: 0.7em;
+      display: block;
+      color: #999;
+    }
+  }
+
+  img.align-right {
+    @include transition( transform 0.3s ease-in-out );
+    @include transform( translate3d(100%,0,0) );
+    float: right;
+    max-width: 50%;
+    margin: 0 0 2em 2em;
+
+    &.transition-in {
+      @include transform( translate3d(0,0,0) );
+    }
+  }
+
+}

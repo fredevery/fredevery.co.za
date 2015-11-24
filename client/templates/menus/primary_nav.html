@@ -1,0 +1,55 @@
+<template name="PrimaryNav">
+  <header id="PrimaryNav" class="{{classes}}">
+
+    {{#if currentUser}}
+      {{> AdminMenu}}
+    {{/if}}
+
+    <div class="nav-toggle-strip">
+      {{#if pageTitle}}
+        <div class="page-title">
+          <h1>{{pageTitle}}</h1>
+        </div>
+      {{/if}}
+      <a class="nav-toggle">
+        <div class="logo">
+          <i class="logo-stripe top"></i>
+          <i class="logo-stripe middle"></i>
+          <i class="logo-stripe bottom"></i>
+          <i class="logo-stripe tail"></i>
+        </div>
+      </a>
+    </div>
+
+    {{#if showMenuContent}}
+      <div class="menu-content">
+        <nav class="site-nav">
+          <ul>
+            <li class="nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/about">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a href="/skillset">Skillset</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="/skillset">Toolset</a>
+            </li> -->
+            <li class="nav-item">
+              <a href="/portfolio">Portfolio</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a>Blog</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a>Contact</a>
+            </li> -->
+          </ul>
+        </nav>
+      </div>
+    {{/if}}
+
+  </header>
+</template>

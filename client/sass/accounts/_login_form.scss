@@ -1,0 +1,16 @@
+.login-form {
+  @include center-screen(fixed);
+  @include box-shadow( 0 2px 20px rgba(#000, 0.5) );
+  background: #FEFEFE;
+  padding: 2em;
+
+  input {
+    display: block;
+
+    &[type="email"],
+    &[type="password"] {
+      width: 20em;
+      margin-bottom: 0.5em;
+    }
+  }
+}

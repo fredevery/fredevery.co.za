@@ -1,0 +1,23 @@
+#fp-nav ul li a span {
+  border: 1px solid #CCC;
+  background: #FFF;
+  margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li a.active span {
+  background: $c-highlight;
+  border: 1px solid transparent;
+  margin: -8px 0 0 -8px;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  margin: -8px 0 0 -8px;
+}
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
+  margin: -7px 0 0 -7px;
+}

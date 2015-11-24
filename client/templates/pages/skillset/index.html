@@ -1,0 +1,76 @@
+<template name="SkillsetIndex">
+  <main id="SkillsetIndex">
+    <section class="skillset-copy">
+      <div class="skillset-descriptions">
+        {{#each skillsetDescriptions}}
+          <div class="section-desc"  data-category="{{category}}">
+            <h1>{{title}}</h1>
+            <p>{{{description}}}</p>
+          </div>
+        {{/each}}
+      </div>
+    </section>
+    <section class="skillset-blocks">
+      <div class="content-wrap">
+        <section class="section" data-category="languages">
+          <h3 class="section-title">Languages</h3>
+          {{#each skillset "language"}}
+            {{> SkillsetBlock}}
+          {{/each}}
+        </section>
+        <section class="section" data-category="paradigms">
+          <h3 class="section-title">Paradigms</h3>
+          {{#each skillset "paradigm"}}
+            {{> SkillsetBlock}}
+          {{/each}}
+        </section>
+        <section class="section" data-category="frameworks">
+          <h3 class="section-title">Frameworks</h3>
+          {{#each skillset "framework"}}
+            {{> SkillsetBlock}}
+          {{/each}}
+        </section>
+        <section class="section" data-category="libraries_apis">
+          <h3 class="section-title">Libraries / APIs</h3>
+          {{#each skillset "library_api"}}
+            {{> SkillsetBlock}}
+          {{/each}}
+        </section>
+        <section class="section" data-category="storage">
+          <h3 class="section-title">Storage</h3>
+          {{#each skillset "storage"}}
+            {{> SkillsetBlock}}
+          {{/each}}
+        </section>
+        <section class="section" data-category="http_servers">
+          <h3 class="section-title">HTTP Servers</h3>
+          {{#each skillset "http_server"}}
+            {{> SkillsetBlock}}
+          {{/each}}
+        </section>
+        <section class="section" data-category="platforms">
+          <h3 class="section-title">Platforms</h3>
+          {{#each skillset "platform"}}
+            {{> SkillsetBlock}}
+          {{/each}}
+        </section>
+        <section class="section" data-category="providers">
+          <h3 class="section-title">Providers</h3>
+          {{#each skillset "provider"}}
+            {{> SkillsetBlock}}
+          {{/each}}
+        </section>
+        <section class="last-section"></section>
+        <!-- <section class="section">
+          <h3 class="section-title">Tools</h3>
+          {{#each skillset "tool"}}
+            {{> SkillsetBlock}}
+          {{/each}}
+        </section> -->
+      </div>
+    </section>
+    <nav class="scroll-dots">
+      
+    </nav>
+  </main>
+</template>
