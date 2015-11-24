@@ -32,8 +32,8 @@ set :rvm1_ruby_version, "2.2.0"
 
 namespace :deploy do
 
-  after :updated, :compass_compile
   after :updated, :build_app
+  after :finished, :start_app
   after :finished, :restart_app
 
 end
