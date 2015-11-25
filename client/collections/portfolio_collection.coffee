@@ -147,16 +147,11 @@ PORTFOLIO_PIECES = [
 
     paradigms: [
       'patterns',
-      'responsive',
-      'responsive_email',
-      'agile',
       'app_arch',
       'mvc',
       'ajax',
-      'rest',
       'oop',
       'events',
-      'ci',
       'template'
     ]
 
@@ -173,7 +168,7 @@ PORTFOLIO_PIECES = [
     ]
 
     servers: [
-      'apache2'
+      'nginx'
     ]
 
   },
@@ -188,6 +183,8 @@ PORTFOLIO_PIECES = [
       of congress in the USA. I built the initial full stack and built against
       iOS and Android.
     '
+
+    link: 'https://play.google.com/store/apps/details?id=com.passivepatriot.app&hl=en'
 
     images:
       handheld: [
@@ -207,12 +204,10 @@ PORTFOLIO_PIECES = [
     paradigms: [
       'patterns',
       'responsive',
-      'responsive_email',
       'agile',
       'app_arch',
       'mvc',
       'ajax',
-      'rest',
       'oop',
       'events',
       'ci',
@@ -222,7 +217,8 @@ PORTFOLIO_PIECES = [
     frameworks: [
       'meteor',
       'compass',
-      'phonegap'
+      'phonegap',
+      'famous'
     ]
 
     libraries_apis: [
@@ -244,9 +240,8 @@ PORTFOLIO_PIECES = [
     company: 'Modus : ADP'
 
     description: '
-      A political tracking app, designed to encourage participation in the activities
-      of congress in the USA. I built the initial full stack and built against
-      iOS and Android.
+      An animated presentation, spanning 3 fullHD screens in the lobby of one of
+      the ADP buildings. Driven by kinetic.js and the <canvas> element.
     '
 
     images:
@@ -257,43 +252,30 @@ PORTFOLIO_PIECES = [
       ]
 
     languages: [
-      'coffeescript',
+      'javascript',
       'html',
       'css',
       'sass',
-      'bash'
+      'ruby'
     ]
 
     paradigms: [
       'patterns',
       'responsive',
-      'responsive_email',
       'agile',
       'app_arch',
-      'mvc',
       'ajax',
-      'rest',
       'oop',
-      'events',
-      'ci',
-      'template'
+      'events'
     ]
 
     frameworks: [
-      'meteor',
-      'compass',
-      'phonegap'
+      'compass'
     ]
 
     libraries_apis: [
       'jquery',
-      'stampit',
-      'underscore',
-      'moment'
-    ]
-
-    servers: [
-      'apache2'
+      'kineticjs'
     ]
 
   },
@@ -304,10 +286,14 @@ PORTFOLIO_PIECES = [
     company: 'Modus : Fireman\'s Fund'
 
     description: '
-      A political tracking app, designed to encourage participation in the activities
-      of congress in the USA. I built the initial full stack and built against
-      iOS and Android.
+      A scrollable timeline of key stories from 50 years of the company\'s history.
+      This won 3 industry awards: two 2013 Communicator Awards in the Rich Media
+      B2C and Corporate Image categories for their inventive, rich media approach
+      to digital storytelling, and an honorable mention from PR Daily’s 2013
+      Digital PR Awards.
     '
+
+    link: 'http://www.firemansfundtimeline.com'
 
     images:
       desktop: [
@@ -315,7 +301,7 @@ PORTFOLIO_PIECES = [
       ]
 
     languages: [
-      'coffeescript',
+      'javascript',
       'html',
       'css',
       'sass',
@@ -325,33 +311,18 @@ PORTFOLIO_PIECES = [
     paradigms: [
       'patterns',
       'responsive',
-      'responsive_email',
       'agile',
       'app_arch',
       'mvc',
       'ajax',
-      'rest',
       'oop',
       'events',
-      'ci',
       'template'
-    ]
-
-    frameworks: [
-      'meteor',
-      'compass',
-      'phonegap'
     ]
 
     libraries_apis: [
       'jquery',
-      'stampit',
-      'underscore',
-      'moment'
-    ]
-
-    servers: [
-      'apache2'
+      'handlebars'
     ]
 
   },
@@ -362,10 +333,11 @@ PORTFOLIO_PIECES = [
     company: 'HealthTap, Inc.'
 
     description: '
-      A political tracking app, designed to encourage participation in the activities
-      of congress in the USA. I built the initial full stack and built against
-      iOS and Android.
+      A health platform designed to bring doctor and patient closer. A
+      backbone.js/marionette.js driven app.
     '
+
+    link: 'http://www.healthtap.com'
 
     images:
       desktop: [
@@ -373,17 +345,17 @@ PORTFOLIO_PIECES = [
       ]
 
     languages: [
-      'coffeescript',
+      'javascript',
       'html',
       'css',
       'sass',
-      'bash'
+      'bash',
+      'ruby'
     ]
 
     paradigms: [
       'patterns',
       'responsive',
-      'responsive_email',
       'agile',
       'app_arch',
       'mvc',
@@ -391,21 +363,22 @@ PORTFOLIO_PIECES = [
       'rest',
       'oop',
       'events',
-      'ci',
       'template'
     ]
 
     frameworks: [
-      'meteor',
+      'rails',
       'compass',
       'phonegap'
     ]
 
     libraries_apis: [
       'jquery',
-      'stampit',
+      'backbone',
       'underscore',
-      'moment'
+      'marionette',
+      'g_analytics',
+      'g_maps'
     ]
 
     servers: [
