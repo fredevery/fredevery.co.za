@@ -5,7 +5,7 @@
 # property set.  Don't declare `role :all`, it's a meta role.
 
 #role :app, %w{deploy@app.passivepatriot.com}
-role :web, %w{fuxe@fredevery.co.za}
+role :web, %w{fuxe@ssh.fuxe.digital}
 #role :db,  %w{deploy@example.com}
 
 set :branch, 'master'
@@ -17,7 +17,7 @@ set :build_server, 'http://fredevery.co.za:80'
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server 'fredevery.co.za', user: 'fuxe', roles: %w{web}
+server 'ssh.fuxe.digital', user: 'fuxe', roles: %w{web}
 
 # Custom SSH Options
 # ==================
